@@ -1,0 +1,25 @@
+{% extends './layout/layout.html' %}
+
+{% block title %} {{ title }} - 蘑菇街 {% endblock %}
+
+{% block style %}
+
+{% if env === 'development' %}
+<!-- <link rel="stylesheet" href="/css/pages/index.css" charset="utf-8"> -->
+{% else %}
+<!-- <link rel="stylesheet" href="/css/pages/index.min-{{ appVersion }}.css" charset="utf-8"> -->
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+<div id="app"></div>
+{% endblock %}
+
+{% block script %}
+{% if env === 'development' %}
+<script src="/js/todo/app.js" charset="utf-8"></script>
+{% else %}
+<!-- <script src="/js/index/app.min-{{ appVersion }}.js" charset="utf-8"></script> -->
+{% endif %}
+{% endblock %}

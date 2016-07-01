@@ -2,6 +2,7 @@
 
 let path = require('path');
 let fs = require('fs');
+let webpack = require('webpack')
 
 const BUILD_PATH = path.resolve(__dirname, 'static/js');
 const NODE_MODULES_PATH = path.resolve(__dirname, 'node_modules');
@@ -32,7 +33,11 @@ let generateEntries = (srcPath, name, entries) => {
 // console.log(generateEntries(SRC_PATH));
 
 module.exports = {
-    entry: generateEntries(SRC_PATH),
+    // entry: generateEntries(SRC_PATH),
+    entry: {
+        'app': './client/js/src/app',
+        'vendor': ['react', 'redux', 'react-redux']
+    },
 
     resolve: {
         extensions: ['', '.js', '.jsx']
@@ -41,6 +46,9 @@ module.exports = {
         filename: '[name].js',
         path: BUILD_PATH
     },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js')
+    ],
     module: {
         loaders: [{
             test: /\.(js|jsx)$/,
