@@ -21,14 +21,7 @@
         </script>
     </head>
     <body>
-        <div class="layout-header" id="header"></div>
-        <div class="layout-main" id="main">
-            <div class="layout-side-menu" id="side-menu"></div>
-            <div class="layout-app-wrap">
-                {% block content %}{% endblock %}
-            </div>
-        </div>
-
+        {% block content %}{% endblock %}
 
         {% if env === 'development' %}
         <!-- <script src="/js/layout/app.js" charset="utf-8"></script> -->

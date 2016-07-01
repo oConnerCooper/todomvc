@@ -1,12 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MyAwesomeReactComponent from './MyAwesomeReactComponent';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import AppBar from 'material-ui/AppBar';
 
-const App = () => (
-  <MuiThemeProvider>
-    <MyAwesomeReactComponent />
-  </MuiThemeProvider>
-);
+const App = React.createClass({
+    render() {
+        return (
+            <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+                <AppBar title="HELLO,MGS~" />
+            </MuiThemeProvider>
+        );
+    }
+});
 
 export default App;
