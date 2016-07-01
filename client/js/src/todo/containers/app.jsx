@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Route } from 'react-router';
 import ReactRouter from 'react-router';
-import createHashHistory from 'history/lib/createHashHistory'
+// import createHashHistory from 'history/lib/createHashHistory'
 
 
 // 引入页面的container
@@ -27,7 +27,7 @@ const Layout = React.createClass({
 const App = React.createClass({
     render() {
         return (
-            <ReactRouter history={createHashHistory}>
+            <ReactRouter>
                 <Route component={Layout}>
                     <Route path="/" component={Todo}></Route>
                 </Route>
