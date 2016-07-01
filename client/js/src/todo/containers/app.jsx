@@ -1,6 +1,7 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Router } from 'react-router';
+
+import { Route } from 'react-router';
+import ReactRouter from 'react-router';
 import createHashHistory from 'history/lib/createHashHistory'
 
 
@@ -26,11 +27,13 @@ const Layout = React.createClass({
 const App = React.createClass({
     render() {
         return (
-            <Router history={createHashHistory}>
+            <ReactRouter history={createHashHistory}>
                 <Route component={Layout}>
                     <Route path="/" component={Todo}></Route>
                 </Route>
-            </Router>
+            </ReactRouter>
         );
     }
 });
+
+export default App;

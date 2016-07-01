@@ -35,7 +35,7 @@ let generateEntries = (srcPath, name, entries) => {
 module.exports = {
     // entry: generateEntries(SRC_PATH),
     entry: {
-        'app': './client/js/src/app',
+        'app': './client/js/src/todo/app',
         'vendor': ['react', 'redux', 'react-redux']
     },
 

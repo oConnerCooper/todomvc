@@ -7,7 +7,7 @@ const TodoController = {
         });
     },
 
-    * index() {
+    * todo() {
         yield this.render('todo', {
             title: '项目列表'
         });

@@ -6,6 +6,7 @@
 
 {% if env === 'development' %}
 <!-- <link rel="stylesheet" href="/css/pages/index.css" charset="utf-8"> -->
+<link rel="stylesheet" href="/css/common/base.css" charset="utf-8">
 {% else %}
 <!-- <link rel="stylesheet" href="/css/pages/index.min-{{ appVersion }}.css" charset="utf-8"> -->
 {% endif %}
@@ -13,12 +14,18 @@
 {% endblock %}
 
 {% block content %}
-<div id="app"></div>
+<div id="todoapp"></div>
+<footer id="info">
+    <p>Double-click to edit a todo</p>
+    <p>Created by <a href="https://github.com/Lucifier129">Jade</a></p>
+    <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+</footer>
 {% endblock %}
 
 {% block script %}
 {% if env === 'development' %}
-<script src="/js/todo/app.js" charset="utf-8"></script>
+<script src="/js/vendor.bundle.js" charset="utf-8"></script>
+<script src="/js/app.js" charset="utf-8"></script>
 {% else %}
 <!-- <script src="/js/index/app.min-{{ appVersion }}.js" charset="utf-8"></script> -->
 {% endif %}
