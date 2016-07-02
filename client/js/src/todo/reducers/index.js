@@ -4,9 +4,7 @@ let rootReducerMap = {
     filter: function() {
         return '';
     },
-    list: function() {
-        return [];
-    }
+    list: list
 }
 /*
 这里生成的就是如下的一个map

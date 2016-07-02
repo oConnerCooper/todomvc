@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+// 创建项目输入的container
+import ProjectCreater from '../containers/ProjectCreater'
 
 export default class Todo extends Component {
     render() {
         return(
             <div>
-                <header id="header">
-                    <h1>todos</h1>
-                    <input id="new-todo" placeholder="What needs to be done?" />
-                </header>
+                <ProjectCreater></ProjectCreater>
                 <section id="main">
                     <input id="toggle-all" type="checkbox" />
                     <label htmlFor="toggle-all">Mark all as complete</label>

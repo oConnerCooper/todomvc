@@ -6,8 +6,8 @@ import ReactRouter from 'react-router';
 
 
 // 引入页面的container
-import Todo from './Todo';
-
+// import Todo from './Todo';
+import Todo from '../components/Todo';
 
 // 用于整体的布局
 const Layout = React.createClass({
