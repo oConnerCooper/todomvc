@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class ProjectCreater extends Component {
     constructor(props) {
         super(props);
-        console.log(Object.keys(this.props))
+        // console.log(Object.keys(this.props))
     }
     shouldComponentUpdate() {
         return false

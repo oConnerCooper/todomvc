@@ -1,9 +1,7 @@
 import filter from './filter';
 import list from './list';
 let rootReducerMap = {
-    filter: function() {
-        return '';
-    },
+    filter: filter,
     list: list
 }
 /*

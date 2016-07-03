@@ -32,6 +32,6 @@ const createMiddleWare = applyMiddleware(
 const rootReducer = combineReducers(reducers);
 
 export default function(initialData) {
-    const store = createMiddleWare(rootReducer, { filter: '', list: [] });
+    const store = createMiddleWare(rootReducer, { filter: 'SHOW_ALL', list: [] });
     return store;
 }
