@@ -8,7 +8,7 @@ export default class ProjectFooter extends Component {
     }
     getClassName(filterType) {
         // var _this = this;
-        console.log(this.props.filter, filterType)
+        // console.log(this.props.filter, filterType)
         return classnames({
             selected: this.props.filter === filterType
         });

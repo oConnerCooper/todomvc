@@ -28,10 +28,11 @@ let updateItem = (data, state) => {
 }
 let clearList = (list, state) => {
     var final = [];
+    var state = state;
     list.forEach(function(clearItem) {
         final = state.filter(item => (item.id !== clearItem.id));
+        state = final
     });
-    
     return final;
 }
 var finalOrigin = [];
